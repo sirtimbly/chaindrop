@@ -4,10 +4,5 @@ var BoxList = Marionette.CollectionView.extend({
   },
   template: JST['boxList'],
   childView: BoxItem,
-  collectionEvents: {
-    "add": "onItemAdded"
-  },
-  onItemAdded: function(item){
-      item.save();
-  }
+  childViewContainer: ".box-list"
 });

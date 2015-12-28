@@ -11,11 +11,16 @@ var BoxCreator = Marionette.ItemView.extend({
     onAddBtnClick: function() {
         var addressee = this.ui.addressBox.val();
         var body = this.ui.bodyText.val();
+        var context = this;
         console.log("creating new box");
-        this.collection.add({
+        var box = new Box();
+        box.save({
             addressee: addressee,
             body: body
-        });
+        }, {success: function(model) {
+            context.collection.add(model);
+        }});
+        
         this.ui.addressBox.val('');
         this.ui.bodyText.val('');
     },

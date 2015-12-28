@@ -1,5 +1,8 @@
 var Box = Backbone.Model.extend({
-    url: '/box'
+    url: '/box',
+    defaults: {
+        'size': '0'
+    }
 });
 
 var BoxCollection = Backbone.Collection.extend({

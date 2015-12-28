@@ -1,7 +1,8 @@
 var App = Marionette.Application.extend({
   initialize: function(options) {
     console.log('init up the js app');
-  }
+  },
+  allBoxes:null
 });
 
 var RootView = Marionette.LayoutView.extend({
@@ -9,6 +10,7 @@ var RootView = Marionette.LayoutView.extend({
   template: false,
   regions: {
       mainRegion: '.main-region',
-      navRegion: '.nav-region'
+      navRegion: '.nav-region',
+      composerRegion: '.composer-region'
   }
 });

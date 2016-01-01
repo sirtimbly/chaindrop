@@ -1,10 +1,11 @@
 var Box = Backbone.Model.extend({
-    url: '/box',
     defaults: {
-        'size': '0'
+            locationUrl:  "",
+            size:         null
     }
 });
 
 var BoxCollection = Backbone.Collection.extend({
-    url: '/box'
+    url: '/box',
+    comparator: 'createdAt'
 });

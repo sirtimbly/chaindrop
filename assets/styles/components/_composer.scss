@@ -1,0 +1,20 @@
+.composer-region {
+    margin: $inuit-base-spacing-unit;
+    padding: $inuit-base-spacing-unit;
+    //border:1px solid $medium;
+    background: $neutral;
+}
+
+.btn--right {
+    float:right;
+    margin-left: $inuit-base-spacing-unit / 3;
+}
+
+.lookup {
+    background:$darker;
+    padding: $inuit-base-spacing-unit / 3;
+}
+
+#addressee {
+    width:80%;
+}

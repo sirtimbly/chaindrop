@@ -21,6 +21,7 @@ module.exports = {
         if (newBox.body.length > sails.config.application.maxDbStorageBodyLength) {
             Box.storeBodyInB2({filename: newBox.hash, buffer: new Buffer(newBox.body)}, function(fileId) {
                 newBox.body = fileId;
+                newBox.locationUrl = fileId;
                 newBox.isRemoteStorage = true;
                 Box.create(newBox).then(function(box) {
                     return res.json(box);

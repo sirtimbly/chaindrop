@@ -9,7 +9,7 @@ var RootView = Marionette.LayoutView.extend({
   el: 'body',
   template: false,
   regions: {
-      mainRegion: '.main-region',
+      mainRegion: '.box-list',
       navRegion: '.nav-region',
       composerRegion: '.composer-region'
   }

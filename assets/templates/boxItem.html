@@ -1,5 +1,4 @@
-<li>
+<span class="indicator"><i class="fa fa-file-text"></i></span>
 <span class="recipient"><a href="/box/raw?id={{id}}">{{id}}</a></span>
-<span class="created">{{createdAt}}</span>
-<span class="size">{{size}}</span> 
-</li>
+<span class="created">{{moment(createdAt).format('LL LT')}}</span>
+<span class="size">{{size}} bytes</span>

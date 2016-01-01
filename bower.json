@@ -21,6 +21,13 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "marionette": "~2.4.4",
-    "inuit.css": "*"
+    "inuit.css": "*",
+    "inuit-starter-kit": "~0.2.9",
+    "inuit-list-ui": "~0.4.1",
+    "inuit-buttons": "~0.4.2",
+    "inuit-list-block": "~0.4.2",
+    "font-awesome": "fontawesome#~4.5.0",
+    "moment": "~2.10.6",
+    "libsodium.js": "~0.2.12"
   }
 }

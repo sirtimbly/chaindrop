@@ -1,13 +1,22 @@
-<form action="#">
-    <div class="form-item">
+<form action="#" class="form-ui">
+    <div class="lookup">
+    <div class="form-ui__item">
         <label for="addressee">Addressee</label>
+         <a href="#" class="btn btn--small btn--lookup btn--right" id="lookup-btn">Look up key</a>
         <input type="text" name="addressee" id="addressee"/>
     </div>
-    <div class="form-item">
+    <div class="form-ui__item key">
+        <label for="key">Recipient's Public Key</label>
+        <input type="text" name="fingerprint" id="fingerprint"/>
+        <textarea name="key" id="key" cols="30" rows="10"></textarea>
+    </div>
+    </div>
+    <div class="form-ui__item">
         <label for="body">Message Text</label>
         <textarea name="body" id="body" cols="30" rows="10"></textarea>
     </div>
-    <div class="form-actions">
-        <a href="#" class="btn btn-add" id="add-btn">Send</a>
+    <div class="form-ui__actions">
+        <a href="#" class="btn btn-add" id="seal-btn">Seal</a>
+        <a href="#" class="btn btn-add" id="add-btn">Store</a>
     </div>
 </form>

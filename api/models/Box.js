@@ -27,10 +27,15 @@ module.exports = {
         type: 'string'  
       },
       size: {
-          type:'string'
+          type:'string',
+          defaultsTo: 0
       },
       locationId: {
           type: 'string'
+      },
+      locationUrl: {
+          type: 'string',
+          defaultsTo: ''
       },
       isRemoteStorage: {
           type: 'boolean'
@@ -65,8 +70,8 @@ module.exports = {
                     filename: filename,
                     data: buffer  // this is expecting a Buffer not an encoded string
                 }).then(function(response){
-                    if (response.fileId){
-                       callback(response.fileId)
+                    if (response.fileName){
+                       callback(b2.downloadUrl + '/files/' + sails.config.backblaze.bucketName + '/' + response.fileName)
                     }
                 });
         });

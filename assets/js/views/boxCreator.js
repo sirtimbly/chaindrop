@@ -47,11 +47,9 @@ var BoxCreator = Marionette.ItemView.extend({
         });
     },
     onSealClick: function() {
-        var key = sodium.crypto_generichash(32,this.ui.fingerprint.val()); 
-        console.log('encrypting with key ' + key);
-        var box = sodium.crypto_box_seal(this.ui.bodyText.val(), key);
-        console.log('result: ' + box);
-        this.ui.bodyText.val(sodium.to_hex(box)); 
+       this.trigger('show:message', this.ui.bodyText.val(), this.ui.key.val(), function(cipherTxt) {
+           this.ui.bodyText.val(cipherText);
+       });
     }
 
 })
